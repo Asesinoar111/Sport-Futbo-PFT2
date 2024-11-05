@@ -1,0 +1,10 @@
+<div class="tallaMSL">
+    <div class="titles-tallaMSL">
+        <h3 class="h3-tallaMSL">Selecciona tu Talla</h3>
+    </div>
+    <div class="content-tallaMSL">
+        <button class="btn-tallaMSL" *ngFor="let tallasMSL of tallasMSL" (click)="seleccionarTalla(tallasMSL)" [ngClass]="{'talla-seleccionada': tallasMSL === tallaSeleccionada}">
+            {{ tallasMSL }}
+        </button>
+    </div>
+</div>

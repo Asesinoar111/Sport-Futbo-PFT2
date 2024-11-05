@@ -1,0 +1,17 @@
+<section class="favoritos">
+  <div class="favoritos-titles">
+    <h2 class="h2">Favoritos</h2>
+  <p class="favoritos-p"><span>{{ totalFavoritos }}</span> Productos</p>
+  </div>
+  <span *ngIf="totalFavoritos == 0" class="notfavoritos">No tienes ningun favorito</span>
+  <div *ngIf="totalFavoritos > 0" class="favoritos-cards-content">
+    <div [routerLink]="['/catalogo', product.name ]" class="favoritos-card" *ngFor="let product of favoritos ">
+        <figure class="favoritos-card-figure"><span (click)="eliminarDeFavoritos(product)" class="favorite-span"><span class="favorite-span-img"></span></span><img src="{{ product.src }}" alt="{{ product.name }}" class="favoritos-card-img"></figure>
+        <figcaption class="favoritos-card-figcaption">
+            <h3 class="favoritos-card-title">{{ product.name }}</h3>
+            <p class="favoritos-card-price">{{ product.price | currency: 'CLP' }}</p>
+        </figcaption>
+    </div>
+  </div>
+    
+</section>

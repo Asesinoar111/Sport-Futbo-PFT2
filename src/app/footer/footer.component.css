@@ -1,0 +1,89 @@
+.footer{
+    width: 100%;
+    padding: 3rem;
+    background-color: #333;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.sobreNosotros{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.h3{
+    font-size: 1.5rem;
+    font-weight: semibold;
+    color: var(--color-1);
+}
+
+.sobreNosotros-ul{
+    list-style: none;   
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.sobreNosotros-li{
+    font-size: 1rem;
+    color: var(--color-2);
+    cursor: pointer;
+}
+
+.contacto{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.contacto-ul{
+    list-style: none;   
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.contacto-li{
+    font-size: 1rem;
+    color: var(--color-2);
+    cursor: pointer;
+}
+
+.suscribete{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.suscribete-content{
+    display: flex;
+    gap: 1rem;
+}
+
+#suscribe-input{
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--color-1);
+    color: var(--color-5);
+}
+
+.suscribete-btn{
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--color-5);
+    color: var(--color-1);
+    cursor: pointer;
+}

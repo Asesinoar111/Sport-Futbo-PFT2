@@ -1,0 +1,15 @@
+.content-add-favoritos-carrito{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.btn-add-favoritos-carrito{
+    width: 100%;
+    padding: 3% 0;
+    border: none;
+    border-radius: 1000px;
+    font-size: 1.2rem;
+    color: #020202;
+}
+

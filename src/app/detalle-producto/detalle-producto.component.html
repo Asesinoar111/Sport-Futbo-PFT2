@@ -1,0 +1,30 @@
+<section class="productDetail">
+    <article class="productDetail-article-1">
+        <figure class="productDetail-figure2">
+            <img [ngClass]="{'selected-img': cambiarImg === product?.src}" *ngIf="product?.src" (click)="cambiarImagen(product?.src || '')" src="{{ product?.src }}" alt="Img 1 - {{ product?.name }}">
+            <img [ngClass]="{'selected-img': cambiarImg === product?.src2}" *ngIf="product?.src2" (click)="cambiarImagen(product?.src2 || '')" src="{{ product?.src2 }}" alt="Img 2 - {{ product?.name }}">
+            <img [ngClass]="{'selected-img': cambiarImg === product?.src3}" *ngIf="product?.src3" (click)="cambiarImagen(product?.src3 || '')" src="{{ product?.src3 }}" alt="Img 3 - {{ product?.name }}">
+            <img [ngClass]="{'selected-img': cambiarImg === product?.src4}" *ngIf="product?.src4" (click)="cambiarImagen(product?.src4 || '')" src="{{ product?.src4 }}" alt="Img 4 - {{ product?.name }}">
+            <img [ngClass]="{'selected-img': cambiarImg === product?.src5}" *ngIf="product?.src5" (click)="cambiarImagen(product?.src5 || '')" src="{{ product?.src5 }}" alt="Img 5 - {{ product?.name }}">
+        </figure>
+        <figure class="productDetail-figure">
+            <img src="{{ cambiarImg }}" alt="Img principal - {{ product?.name }}" class="productDetail-img">
+        </figure>
+    </article>
+    <article class="productDetail-article-2">
+        <div class="productDetail-titles">
+            <h2 class="productDetail-title">{{ product?.name }}</h2>
+            <h3 class="productDetail-tipe">{{product?.categoria}} <span *ngIf="product?.genero !=='Unisex' && '' && 'sin genero'">para</span> {{ product?.genero}}</h3>
+            <p class="productDetail-price">{{ product?.price | currency: 'CLP' }}</p>
+        </div>  
+        <app-talla-zapatilla *ngIf="product?.categoria == 'Zapatillas'"></app-talla-zapatilla>
+        <app-talla-msl *ngIf="product?.categoria == 'Camisetas'"></app-talla-msl>
+        <div class="content-add-favoritos-carrito">
+            <button (click)="agregarAlCarrito()" class="btn-add-favoritos-carrito">Agregar al carrito</button>
+            <button (click)="agregarAFavoritos()" class="btn-add-favoritos-carrito">Favoritos</button>
+        </div>
+        <p class="productDetail-description">{{ product?.description }}</p>
+    </article>
+    <div *ngIf="product?.categoria == this.product?.categoria">
+    </div>
+</section>

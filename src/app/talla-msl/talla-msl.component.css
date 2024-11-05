@@ -1,0 +1,38 @@
+.tallaMSL{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.titles-tallaMSL{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.h3-tallaMSL{
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #02020280;
+}
+
+.content-tallaMSL{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+}
+
+.btn-tallaMSL{
+    aspect-ratio: 1/0.5;
+    font-size: 1rem;
+    background-color: white;
+    border: 2px solid #02020280;
+    color: #02020280;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.talla-seleccionada {
+    background-color: #333;
+    color: #fff;
+  }

@@ -1,0 +1,127 @@
+.favoritos{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 3rem;
+}
+
+.favoritos-titles{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.favoritos-p{
+    font-size: 1.2rem;
+    color: var(--color-4);
+    display: flex;
+}
+
+.favoritos-p span{
+    margin-right: 10px;
+}
+
+.notfavoritos{
+    font-size: 1.2rem;
+    color: var(--color-10);
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.favoritos-cards-content{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 1rem;
+}
+
+.favoritos-card{
+    position: relative;
+    width: 300px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: #ffffff;
+    transition: all 0.3s;
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.favoritos-card:hover{
+    transform: translateY(-5px);
+}
+
+.favoritos-cards-figure{
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 0px;
+    overflow: hidden;
+}
+
+.favorite-span{
+    position: absolute;
+    z-index: 10;
+    top: 10px;
+    right: 10px;
+    background-color: var(--color-10);
+    padding: 0.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.favorite-span:hover{
+    background-color: var(--color-1);
+    border: 2px solid var(--color-10);
+}
+
+.favorite-span-img{
+    width: 30px;
+    aspect-ratio: 1/1;
+    mask-image: url(img/heart-solid.svg);
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    background-color: var(--color-1);
+}
+
+.favorite-span:hover span{
+    background-color: var(--color-10);
+}
+
+.favoritos-card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0px;
+}   
+
+.favoritos-card-figcaption{
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 0.5rem;
+}
+
+.favoritos-card-title{
+    font-size: 1.2rem;
+    color: var(--color-4);
+}
+
+.favoritos-card-price{
+    font-size: 1rem;
+    color: var(--color-3);
+}

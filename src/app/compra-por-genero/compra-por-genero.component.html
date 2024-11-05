@@ -1,0 +1,9 @@
+<section class="generos">
+    <h2 class="h2">Compra por género</h2>
+    <div class="generos-content">
+        <div class="generos-div" routerLink="/catalogo" *ngFor="let generos of generos">
+            <figure class="generos-figure"><img src="{{ generos.link }}" alt="{{ generos.titulo }}" class="generos-img"></figure>
+            <button class="generos-btn">{{ generos.titulo }}</button>
+        </div>
+    </div>
+</section>

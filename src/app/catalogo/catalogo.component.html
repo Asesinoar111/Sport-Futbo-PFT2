@@ -1,0 +1,79 @@
+<section class="catalogo">
+    <div class="catalogo-titles">
+        <h2 class="catalogo-title">Catalogo</h2>
+        <p class="catalogo-p"><span *ngIf="filteredProductCount !== 0">{{ filteredProductCount }}</span><span *ngIf="filteredProductCount == 0">50</span> Productos</p>
+    </div> 
+    <article class="catalogo-content">
+        <div class="catalogo-filter">
+            <div class="filter-titles">
+                <h3 class="filter-title">Filtros</h3>
+                <a class="filter-clear" (click)="clearFilters()">Limpiar Filtros</a>
+            </div>
+            <div class="filter-group filter-type">
+                <h3 class="filter-group-title">Equipo</h3>
+                <div class="filter-group-content">
+                    <div class="filter-group-content-item" *ngFor="let team of [
+                    'Colo-colo',
+                    'Universidad de chile',
+                    'Real Madrid',
+                    'Chile',
+                    'Argentina',
+                    'Arsenal',
+                    'Juventus',
+                    'España',
+                    'Alemania',
+                    'Italia',
+                    'Milan',
+                    'Man City',
+                    'Dortmund',
+                    'Miami',
+                  ]">
+                        <label>
+                            <input type="checkbox" (change)="updateFilter('teams', team, $event)" /> {{ team }}
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="filter-group filter-type">
+                <h3 class="filter-group-title">Género</h3>
+                <div class="filter-group-content">
+                    <div class="filter-group-content-item" *ngFor="let gender of ['Hombre', 'Mujer', 'Unisex']">
+                        <label>
+                            <input type="checkbox" (change)="updateFilter('genders', gender, $event)" /> {{ gender }}
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="filter-group filter-type">
+                <h3 class="filter-group-title">Categoría</h3>
+                <div class="filter-group-content">
+                    <div class="filter-group-content-item" *ngFor="let category of ['Camisetas', 'Zapatillas', 'Balones', 'Guantes', 'canillera']">
+                        <label>
+                            <input type="checkbox" (change)="updateFilter('categories', category, $event)" /> {{ category | titlecase }}
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="filter-group filter-type">
+                <h3 class="filter-group-title">Marca</h3>
+                <div class="filter-group-content">
+                    <div class="filter-group-content-item" *ngFor="let brand of ['Nike', 'Adidas', 'Puma', 'Baburizza']">
+                        <label>
+                            <input type="checkbox" (change)="updateFilter('brands', brand, $event)" /> {{ brand }}
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="catalogo-cards-content">
+            <div [routerLink]="['/catalogo', product.name ]" class="catalogo-card" *ngFor="let product of filteredProducts ">
+                <figure class="catalogo-card-figure"><img src="{{ product.src }}" alt="{{ product.name }}" class="catalogo-card-img"></figure>
+                <figcaption class="catalogo-card-figcaption">
+                    <h3 class="catalogo-card-title">{{ product.name }}</h3>
+                    <p class="catalogo-card-price">{{ product.price | currency: 'CLP' }}</p>
+                </figcaption>
+            </div>
+        </div>
+    </article>
+</section>
+

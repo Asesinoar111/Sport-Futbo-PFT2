@@ -1,0 +1,25 @@
+<section class="shopping">
+  <div class="carrito-titles">
+    <h2 class="h2">Carrito de Compras</h2>
+  <p class="carrito-p"><span>{{ totalCarrito }}</span> Productos</p>
+  </div>
+  <ul *ngIf="carrito.length > 0" class="shopping__list">
+    <li *ngFor="let product of carrito" class="shopping__item">
+      <div class="shopping-item-content">
+        <figure class="shopping__figure">
+          <img [src]="product.src" [alt]="product.name" class="shopping__image">
+        </figure>
+        <div class="shopping__info">
+          <h3 [routerLink]="['/catalogo', product.name ]" class="shopping__title">{{ product.name }}</h3>
+          <p class="shopping__price">{{ product.price | currency: 'CLP' }}</p>
+        </div>
+      </div>
+      <span class="shopping-btn-2" (click)="eliminarDelCarrito(product)"></span>
+    </li>
+  </ul>
+  <p class="notitems" *ngIf="carrito.length == 0">No hay productos en el carrito</p>
+  <div *ngIf="carrito.length > 0" class="shopping-total">
+    <h2 class="shopping-total-h2">Total:  <span>{{ totalPrice | currency: 'CLP' }}</span></h2>
+    <button class="shopping-btn" (click)="comprarTodo()">Comprar</button>
+  </div>
+</section>

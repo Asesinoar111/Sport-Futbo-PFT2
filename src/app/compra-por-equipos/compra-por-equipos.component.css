@@ -1,0 +1,53 @@
+.equipos{
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.equipos-h2{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #333;
+}   
+
+.equipos-content{
+    width: 100%;
+    display: flex;
+    gap: 3rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+
+.equipos-div{
+    width: 13.5%;
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    scroll-snap-align: end;
+}
+
+.equipos-figure{
+    width: 100%;
+    aspect-ratio: 1/1;
+}
+
+.equipos-figure img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.equipos-figcaption{
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}   
+
+.equipos-h2{
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #333;
+    text-align: center;
+}

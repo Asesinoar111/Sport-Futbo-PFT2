@@ -1,0 +1,24 @@
+<footer class="footer">
+    <section class="sobreNosotros">
+        <h3 routerLink="/sobre-nosotros" class="h3">Sobre nosotros</h3>
+        <ul class="sobreNosotros-ul">
+            <li routerLink="/sobre-nosotros" class="sobreNosotros-li">¿Quiénes somos?</li>
+            <li routerLink="/sobre-nosotros" class="sobreNosotros-li">Trabaja con nosotros</li>
+            <li routerLink="/sobre-nosotros" class="sobreNosotros-li">Términos y condiciones</li>
+        </ul>
+    </section>
+    <section class="contacto">
+        <h3 class="h3">Contacto</h3>
+        <ul class="contacto-ul">
+            <li class="contacto-li">+56 9 1234 5678</li>
+            <li class="contacto-li">Support&#64;SportFutbol.com</li>
+        </ul>
+    </section>
+    <section class="suscribete">
+        <h3 class="h3">Suscribete para recibir noticias</h3>
+        <div class="suscribete-content">
+            <input [(ngModel)]="Email" type="email" name="suscribe" id="suscribe-input">
+            <input (click)="EnviarEmail()" type="submit" value="Enviar" class="suscribete-btn">
+        </div>
+    </section>
+</footer>

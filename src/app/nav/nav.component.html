@@ -1,0 +1,26 @@
+<nav class="nav">
+    <div class="nav-content" routerLink="/home">
+        <figure class="nav-figure"></figure>
+        <h2 class="nav-h2">Sport Fútbol</h2>
+    </div>
+    <ul class="nav-list">
+        <li class="nav-item"><a routerLink="/catalogo" routerLinkActive="active2">Hombre</a></li>
+        <li class="nav-item"><a routerLink="/catalogo" routerLinkActive="active2">Mujer</a></li>
+        <li class="nav-item"><a routerLink="/catalogo" routerLinkActive="active2">Accesorios</a></li>
+        <li class="nav-item"><a routerLink="/catalogo" routerLinkActive="active2">Lanzamientos</a></li>
+    </ul>
+    <ul class="nav-list">
+        <li class="nav-item nav-item-2">
+            <a class="nav-link nav-link-2" routerLink="/favorite" routerLinkActive="active-span-1">
+                <span class="nav-icon nav-icon-2"></span>
+                <span class="nav-count-FC" *ngIf="totalFavoritos > 0">{{ totalFavoritos }}</span>
+            </a>
+        </li>
+        <li class="nav-item nav-item-3">
+            <a class="nav-link nav-link-3" routerLink="/shopping" routerLinkActive="active-span-2">
+                <span class="nav-icon nav-icon-3">{{ totalCarrito }}</span>
+                <span class="nav-count-FC" *ngIf="totalCarrito > 0">{{ totalCarrito }}</span>
+            </a>
+        </li>
+    </ul>
+</nav>

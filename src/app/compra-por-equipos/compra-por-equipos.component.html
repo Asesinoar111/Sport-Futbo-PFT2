@@ -1,0 +1,11 @@
+<section class="equipos">
+    <h2 class="h2">Compra por equipos</h2>
+    <div class="equipos-content">
+        <div class="equipos-div" routerLink="/catalogo" *ngFor="let equipos of equipos">
+            <figure class="equipos-figure"><img src="{{ equipos.link }}" alt="{{ equipos.titulo }}" class="equipos-img"></figure>
+            <figcaption class="equipos-figcaption">
+                <h2 class="equipos-h2">{{ equipos.titulo }}</h2>
+            </figcaption>
+        </div>
+    </div>
+</section>

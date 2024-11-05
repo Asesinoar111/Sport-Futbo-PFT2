@@ -1,0 +1,27 @@
+<section class="sobreNosotros">
+    <h2 class="h2">Sobre Nosotros</h2>
+    <div class="container">
+        <div class="container-info-acomaba">
+            <h3 class="h3">Acomaba</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo enim quis, ea dolorem voluptatem consequatur blanditiis! Quidem officiis minima cum.</p>
+        </div>
+        <div class="container-info-mision">
+            <h3 class="h3">Misión</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo enim quis, ea dolorem voluptatem consequatur blanditiis! Quidem officiis minima cum.</p>
+        </div>
+    </div>
+    <div class="personal">
+        <h3 class="h3">Nuestro Equipo</h3>
+        <div class="content-personal-cards">
+            <div class="personal-card" *ngFor="let Equipo of Equipo">
+                <img [src]="Equipo.foto" alt="img" class="card-img">
+                <figcaption class="personal-card-figcaption">
+                    <h4 class="card-nombre">{{Equipo.nombre}}</h4>
+                <h5 class="card-puesto">{{Equipo.puesto}}</h5>
+                <p class="card-descripcion">{{ Equipo.descripcion }}</p>
+                <a target="_blank" class="card-link" [href]="Equipo.linkProfile">Ver Portafolio</a>
+                </figcaption>
+            </div>
+        </div>
+    </div>
+</section>

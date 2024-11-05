@@ -1,0 +1,11 @@
+<section class="novedades">
+    <h2 class="h2">Novedades</h2>
+    <div class="novedades-content">
+        <div class="novedades-div" routerLink="/catalogo" *ngFor="let novedades of novedades">
+            <figure class="novedades-figure"><img src="{{ novedades.link }}" alt="{{ novedades.titulo }}" class="novedades-img"></figure>
+            <figcaption class="novedades-figcaption">
+                <h2 class="novedades-h2">{{ novedades.titulo }}</h2>
+            </figcaption>
+        </div>
+    </div>
+</section>
